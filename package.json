@@ -1,12 +1,11 @@
 {
   "name": "untitled-folder",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "start": "node backend/index.js",
+    "dev": "nodemon backend/index.js"
   },
   "keywords": [],
   "author": "",
@@ -16,9 +15,20 @@
     "nodemon": "^3.1.9"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.0.14",
     "elasticsearch": "^16.7.3",
     "express": "^4.21.2",
     "fuse.js": "^7.1.0",
-    "mongoose": "^8.12.1"
-  }
+    "mongoose": "^8.12.1",
+    "tailwindcss": "^4.0.14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annita049/testingsearch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/annita049/testingsearch/issues"
+  },
+  "homepage": "https://github.com/annita049/testingsearch#readme",
+  "description": ""
 }

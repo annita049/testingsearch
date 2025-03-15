@@ -13,9 +13,13 @@ export const getAllUsers = async (req, res) => {
   try {
     const users = await userService.getAllUsers();
 
-    const filteredUsers = users.map(({ name, email, jobExperience }) => ({
+    const filteredUsers = users.map(({ name, email, jobExperience, currentlyWorkingIn }) => ({
       name,
       email,
+      currentlyWorkingIn: {
+        post: currentlyWorkingIn.post,
+        company: currentlyWorkingIn.company
+      },
       jobExperience: jobExperience.map(({ post, company }) => ({
         post,
         company

@@ -5,6 +5,10 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    session: {
+      type: String,
+      required: true,
+    },
     email: {
       type: String,
       required: true,
@@ -57,10 +61,14 @@ const userSchema = new mongoose.Schema(
           type: String,
           default: "0",
         },
-        years: {
+        start: {
           type: Number,
           default: 0,
         },
+        end: {
+          type: Number,
+          default: 0,
+        }
       },
     ],
     haveWorkedIn: {
@@ -68,8 +76,22 @@ const userSchema = new mongoose.Schema(
       default: "0",
     },
     currentlyWorkingIn: {
-      type: String,
-      default: "0",
+        post: {
+          type: String,
+          default: "0",
+        },
+        company: {
+          type: String,
+          default: "0",
+        },
+        start: {
+          type: Number,
+          default: 0,
+        },
+        end: {
+          type: Number,
+          default: 0,
+        }
     },
     futureInterests: {
       type: String,
